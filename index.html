@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M Touseef Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="./assets/T  logo1.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">M <span>Touseef</span></a>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Designing Spaces That Inspire</h1>
+                <p>Creating architectural masterpieces that blend functionality with aesthetic appeal, transforming
+                    visions into reality.</p>
+                <div class="hero-btns">
+                    <a href="#projects" class="btn">View Projects</a>
+                    <a href="#contact" class="btn btn-outline">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About Me</h2>
+                    <p>With over 15 years of experience in architectural design, I specialize in creating innovative
+                        spaces that reflect both the client's vision and the surrounding environment. My work focuses on
+                        sustainable design principles and modern aesthetics.</p>
+                    <p>I believe that architecture should not only be visually stunning but also functional,
+                        sustainable, and tailored to the needs of those who inhabit the space.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-text">Projects Completed</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">15+</div>
+                            <div class="stat-text">Years Experience</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">3+</div>
+                            <div class="stat-text">Grand Architectures</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Architect">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="projects-header">
+                <h2>Featured Projects</h2>
+                <p>Explore my portfolio of architectural designs and completed projects</p>
+            </div>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="commercial">Commercial</button>
+                <button class="filter-btn" data-filter="interior">Interior Design</button>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card" data-category="commercial">
+                    <div class="project-image">
+                        <img src="/assets/12.jpeg"
+                            alt="Paradise Pearl Hall">
+                        <div class="project-overlay">
+                            <button class="btn view-details-btn" data-project="1">View Details</button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Paradise Pearl Hall</h3>
+                        <p>A luxurious wedding venue with contemporary design elements and traditional Pakistani
+                            architectural influences.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Commercial</span>
+                            <span class="project-tag">Event Space</span>
+                            <span class="project-tag">Luxury</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card" data-category="interior">
+                    <div class="project-image">
+                        <img src="/assets/3.jpeg"
+                            alt="Grand Celebration Hall">
+                        <div class="project-overlay">
+                            <button class="btn view-details-btn" data-project="2">View Details</button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Grand Celebration Hall</h3>
+                        <p>Spacious event hall with intricate wall designs and modern lighting solutions for memorable
+                            celebrations.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Commercial</span>
+                            <span class="project-tag">Event Space</span>
+                            <span class="project-tag">Modern</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card" data-category="interior">
+                    <div class="project-image">
+                        <img src="/assets/11.jpeg"
+                            alt="Luxury Hall Interior">
+                        <div class="project-overlay">
+                            <button class="btn view-details-btn" data-project="3">View Details</button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Luxury Hall Interior</h3>
+                        <p>Elegant interior design with custom furniture, premium finishes, and thoughtful space
+                            planning.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Interior Design</span>
+                            <span class="project-tag">Commercial</span>
+                            <span class="project-tag">Luxury</span>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Popups -->
+    <!-- Project 1 Popup -->
+    <div class="project-popup" id="project-popup-1">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h3 class="popup-title">Paradise Pearl Hall</h3>
+                <button class="popup-close">&times;</button>
+            </div>
+            <div class="popup-body">
+                <div class="popup-gallery">
+                    <div class="gallery-main">
+                        <img src="/assets/12.jpeg"
+                            alt="Royal Wedding Hall Main View" id="main-img-1">
+                    </div>
+                    <div class="gallery-thumbs">
+                        <div class="gallery-thumb active"
+                            data-img="/assets/13.jpeg">
+                            <img src="/assets/13.jpeg"
+                                alt="Royal Wedding Hall Exterior">
+                        </div>
+                        <div class="gallery-thumb"
+                            data-img="/assets/14.jpeg">
+                            <img src="/assets/14.jpeg"
+                                alt="Royal Wedding Hall Interior">
+                        </div>
+                        <div class="gallery-thumb"
+                            data-img="/assets/12.jpeg">
+                            <img src="/assets/12.jpeg"
+                                alt="Royal Wedding Hall Details">
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-details">
+                    <h3>Project Overview</h3>
+                    <p>The Royal Wedding Hall is a premium event space designed for luxury weddings and celebrations.
+                        Located in the heart of the city, this venue combines traditional Pakistani architectural
+                        elements with contemporary design.</p>
+
+                    <div class="project-features">
+                        <h4>Key Features</h4>
+                        <ul class="features-list">
+                            <li>Grand entrance with ornate archways</li>
+                            <li>Spacious main hall accommodating 500+ guests</li>
+                            <li>Custom crystal chandeliers and lighting</li>
+                            <li>State-of-the-art sound and visual systems</li>
+                            <li>Separate dining and ceremony areas</li>
+                            <li>Elegant facade with traditional motifs</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-features">
+                        <h4>Materials & Finishes</h4>
+                        <ul class="features-list">
+                            <li>Italian marble flooring</li>
+                            <li>Custom woodwork and carvings</li>
+                            <li>Gold leaf accents</li>
+                            <li>Textured wall panels</li>
+                            <li>Premium fabric drapery</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 2 Popup -->
+    <div class="project-popup" id="project-popup-2">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h3 class="popup-title">Grand Celebration Hall</h3>
+                <button class="popup-close">&times;</button>
+            </div>
+            <div class="popup-body">
+                <div class="popup-gallery">
+                    <div class="gallery-main">
+                        <img src="/assets/3.jpeg"
+                            alt="Grand Celebration Hall Main View" id="main-img-2">
+                    </div>
+                    <div class="gallery-thumbs">
+                        <div class="gallery-thumb active"
+                            data-img="/assets/2.jpeg">
+                            <img src="/assets/2.jpeg"
+                                alt="Grand Celebration Hall Exterior">
+                        </div>
+                        <div class="gallery-thumb"
+                            data-img="/assets/4.jpeg">
+                            <img src="/assets/4.jpeg"
+                                alt="Grand Celebration Hall Interior">
+                        </div>
+                        <div class="gallery-thumb"
+                            data-img="/assets/5.jpeg">
+                            <img src="/assets/5.jpeg"
+                                alt="Grand Celebration Hall Details">
+                        </div>
+                        <div class="gallery-thumb"
+                            data-img="/assets/1.jpeg">
+                            <img src="/assets/1.jpeg" alt="Grand Celebration Hall Details">
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-details">
+                    <h3>Project Overview</h3>
+                    <p>The Grand Celebration Hall is designed as a versatile event space suitable for weddings,
+                        corporate events, and social gatherings. The design focuses on creating a memorable experience
+                        through architectural details and spatial planning.</p>
+
+                    <div class="project-features">
+                        <h4>Key Features</h4>
+                        <ul class="features-list">
+                            <li>Modular space with movable partitions</li>
+                            <li>Advanced lighting control systems</li>
+                            <li>Custom-designed wall panels with intricate patterns</li>
+                            <li>Spacious outdoor area for pre-function events</li>
+                            <li>VIP lounge with premium amenities</li>
+                            <li>Eco-friendly design with energy-efficient systems</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-features">
+                        <h4>Design Elements</h4>
+                        <ul class="features-list">
+                            <li>Contemporary interpretation of traditional motifs</li>
+                            <li>Warm color palette with gold accents</li>
+                            <li>Textured surfaces creating visual interest</li>
+                            <li>Strategic use of natural light</li>
+                            <li>Custom furniture designed specifically for the space</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 3 Popup -->
+    <div class="project-popup" id="project-popup-3">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h3 class="popup-title">Grand Celebration Hall</h3>
+                <button class="popup-close">&times;</button>
+            </div>
+            <div class="popup-body">
+                <div class="popup-gallery">
+                    <div class="gallery-main">
+                        <img src="/assets/11.jpeg" alt="Grand Celebration Hall Main View" id="main-img-2">
+                    </div>
+                    <div class="gallery-thumbs">
+                        <div class="gallery-thumb active" data-img="/assets/6.jpeg">
+                            <img src="/assets/6.jpeg" alt="Grand Celebration Hall Exterior">
+                        </div>
+                        <div class="gallery-thumb" data-img="/assets/8.jpeg">
+                            <img src="/assets/8.jpeg" alt="Grand Celebration Hall Interior">
+                        </div>
+                        <div class="gallery-thumb" data-img="/assets/9.jpeg">
+                            <img src="/assets/9.jpeg" alt="Grand Celebration Hall Details">
+                        </div>
+                        <div class="gallery-thumb" data-img="/assets/10.jpeg">
+                            <img src="/assets/10.jpeg" alt="Grand Celebration Hall Details">
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-details">
+                    <h3>Project Overview</h3>
+                    <p>The Grand Celebration Hall is designed as a versatile event space suitable for weddings,
+                        corporate events, and social gatherings. The design focuses on creating a memorable experience
+                        through architectural details and spatial planning.</p>
+    
+                    <div class="project-features">
+                        <h4>Key Features</h4>
+                        <ul class="features-list">
+                            <li>Modular space with movable partitions</li>
+                            <li>Advanced lighting control systems</li>
+                            <li>Custom-designed wall panels with intricate patterns</li>
+                            <li>Spacious outdoor area for pre-function events</li>
+                            <li>VIP lounge with premium amenities</li>
+                            <li>Eco-friendly design with energy-efficient systems</li>
+                        </ul>
+                    </div>
+    
+                    <div class="project-features">
+                        <h4>Design Elements</h4>
+                        <ul class="features-list">
+                            <li>Contemporary interpretation of traditional motifs</li>
+                            <li>Warm color palette with gold accents</li>
+                            <li>Textured surfaces creating visual interest</li>
+                            <li>Strategic use of natural light</li>
+                            <li>Custom furniture designed specifically for the space</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="services-header">
+                <h2>My Services</h2>
+                <p>Comprehensive architectural solutions tailored to your needs</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-drafting-compass"></i>
+                    </div>
+                    <h3>Architectural Design</h3>
+                    <p>Custom architectural designs that balance aesthetics, functionality, and sustainability for
+                        residential and commercial projects.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Interior Design</h3>
+                    <p>Thoughtful interior spaces that reflect your personality while maximizing functionality and
+                        visual appeal.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hard-hat"></i>
+                    </div>
+                    <h3>Project Management</h3>
+                    <p>End-to-end project management ensuring your vision is realized on time and within budget.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="testimonials-header">
+                <h2>Client Testimonials</h2>
+                <p>What my clients say about working with me</p>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonial">
+                    <p class="testimonial-text">"Working with this architect transformed our vision into a breathtaking
+                        reality. The attention to detail and creative solutions exceeded our expectations."</p>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="/assets/sarah Johnson.jpg"
+                                alt="Client">
+                        </div>
+                        <div class="author-info">
+                            <h4>Sarah Johnson</h4>
+                            <p>Royal Wedding Hall Client</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2>Get In Touch</h2>
+                    <p>Ready to start your architectural project? Contact me to discuss your vision and how we can bring it
+                        to life.</p>
+                    <div class="contact-details-horizontal">
+                        <div class="contact-item-horizontal">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Location</h4>
+                                <p>Lahore, Pakistan</p>
+                            </div>
+                        </div>
+                        <div class="contact-item-horizontal">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Phone</h4>
+                                <p>+92 300 1234567</p>
+                            </div>
+                        </div>
+                        <div class="contact-item-horizontal">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <p>info@archdesign.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item-horizontal">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Business Hours</h4>
+                                <p>Mon - Fri: 9AM - 6PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-map">
+                    <div class="map-placeholder">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <h3>Our Location</h3>
+                        <p>Lahore, Pakistan</p>
+                        <a href="#" class="btn">View on Google Maps</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>M. Tauseef</h3>
+                    <p>Creating architectural masterpieces that blend functionality with aesthetic appeal, transforming
+                        visions into reality.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Architectural Design</a></li>
+                        <li><a href="#">Interior Design</a></li>
+                        <li><a href="#">Project Management</a></li>
+                        <li><a href="#">Consultation</a></li>
+                        <li><a href="#">Renovation</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="credits-content">
+                <div class="credits-logo">
+                    <img src="assets/QuickSite Logo.png" alt="QuickSite Logo">
+                    <span>QuickSite</span>
+                </div>
+                <p>This portfolio website was crafted with expertise by <strong>QuickSite</strong></p>
+                <div class="credits-links">
+                    <a href="https://quick-site-00.vercel.app/" class="credits-link" target="_blank">
+                        <i class="fas fa-external-link-alt"></i>
+                        Visit Our Website
+                    </a>
+                    <a href="https://quick-site-00.vercel.app/#contact" class="credits-link" target="_blank">
+                        <i class="fas fa-handshake"></i>
+                        Work With Us
+                    </a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 ArchDesign. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js">
+
+    </script>
+</body>
+
+</html>
