@@ -15,14 +15,14 @@
     <header id="header">
         <div class="container">
             <nav class="navbar">
-                <a href="#" class="logo">M <span>Touseef</span></a>
+                <a href="#home" class="logo">M <span>Touseef</span></a>
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#projects">Projects</a></li>
-                    <li><a href="#services">Services</a></li>
                     <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#business-card">Contact</a></li>
                 </ul>
                 <div class="hamburger">
                     <i class="fas fa-bars"></i>
@@ -73,7 +73,7 @@
                     </div>
                 </div>
                 <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    <img src="/assets/AboutPic.jpeg"
                         alt="Architect">
                 </div>
             </div>
@@ -354,6 +354,31 @@
         </div>
     </div>
 
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="testimonials-header">
+                <h2>Client Testimonials</h2>
+                <p>What my clients say about working with me</p>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonial">
+                    <p class="testimonial-text">"Working with this architect transformed our vision into a breathtaking
+                        reality. The attention to detail and creative solutions exceeded our expectations."</p>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="/assets/sarah Johnson.jpg"
+                                alt="Client">
+                        </div>
+                        <div class="author-info">
+                            <h4>Sarah Johnson</h4>
+                            <p>Royal Wedding Hall Client</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Services Section -->
     <section class="services" id="services">
@@ -390,85 +415,60 @@
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="testimonials" id="testimonials">
-        <div class="container">
-            <div class="testimonials-header">
-                <h2>Client Testimonials</h2>
-                <p>What my clients say about working with me</p>
-            </div>
-            <div class="testimonials-slider">
-                <div class="testimonial">
-                    <p class="testimonial-text">"Working with this architect transformed our vision into a breathtaking
-                        reality. The attention to detail and creative solutions exceeded our expectations."</p>
-                    <div class="testimonial-author">
-                        <div class="author-image">
-                            <img src="/assets/sarah Johnson.jpg"
-                                alt="Client">
-                        </div>
-                        <div class="author-info">
-                            <h4>Sarah Johnson</h4>
-                            <p>Royal Wedding Hall Client</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
+    <!-- Business Card Section -->
+    <section class="business-card" id="business-card">
         <div class="container">
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h2>Get In Touch</h2>
-                    <p>Ready to start your architectural project? Contact me to discuss your vision and how we can bring it
-                        to life.</p>
-                    <div class="contact-details-horizontal">
-                        <div class="contact-item-horizontal">
-                            <div class="contact-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
+            <div class="card-section-header">
+                <h2>Get In Touch</h2>
+                <p>Connect with me professionally - Save my contact details directly to your device</p>
+            </div>
+            <div class="card-container">
+                <div class="card-preview">
+                    <div class="card-front">
+                        <img src="assets/Card front.jpg" alt="Business Card Front">
+                    </div>
+                    <div class="card-back">
+                        <img src="assets/Card back.jpg" alt="Business Card Back">
+                    </div>
+                </div>
+                <div class="card-info">
+                    <h3>M. Touseef</h3>
+                    <p class="company">Silverlines Consultant</p>
+                    <p class="title">Architectural Designer & Builder</p>
+    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
                             <div class="contact-text">
-                                <h4>Location</h4>
-                                <p>Lahore, Pakistan</p>
+                                <span class="label">Phone</span>
+                                <span class="value">0300-8557844</span>
+                                <span class="value">0321-8557844</span>
                             </div>
                         </div>
-                        <div class="contact-item-horizontal">
-                            <div class="contact-icon">
-                                <i class="fas fa-phone"></i>
-                            </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
                             <div class="contact-text">
-                                <h4>Phone</h4>
-                                <p>+92 300 1234567</p>
+                                <span class="label">Email</span>
+                                <span class="value">silverlines.consultant@gmail.com</span>
                             </div>
                         </div>
-                        <div class="contact-item-horizontal">
-                            <div class="contact-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
                             <div class="contact-text">
-                                <h4>Email</h4>
-                                <p>info@archdesign.com</p>
-                            </div>
-                        </div>
-                        <div class="contact-item-horizontal">
-                            <div class="contact-icon">
-                                <i class="fas fa-clock"></i>
-                            </div>
-                            <div class="contact-text">
-                                <h4>Business Hours</h4>
-                                <p>Mon - Fri: 9AM - 6PM</p>
+                                <span class="label">Address</span>
+                                <span class="value">131 Defence Main Boulevard, Lahore</span>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="contact-map">
-                    <div class="map-placeholder">
-                        <i class="fas fa-map-marked-alt"></i>
-                        <h3>Our Location</h3>
-                        <p>Lahore, Pakistan</p>
-                        <a href="#" class="btn">View on Google Maps</a>
+    
+                    <div class="card-actions">
+                        <button class="btn" id="save-contact-btn">
+                            <i class="fas fa-download"></i> Save to Contacts
+                        </button>
+                        <button class="btn btn-outline" id="download-card-btn">
+                            <i class="fas fa-image"></i> Download Card
+                        </button>
                     </div>
                 </div>
             </div>
@@ -497,7 +497,7 @@
                         <li><a href="#about">About</a></li>
                         <li><a href="#projects">Projects</a></li>
                         <li><a href="#services">Services</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#business-card">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">

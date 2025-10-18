@@ -282,8 +282,8 @@ header.scrolled {
 }
 
 .about-image {
-    border-radius: var(--border-radius);
-    overflow: hidden;
+    overflow: visible;
+    
     box-shadow: var(--shadow);
 }
 
@@ -291,6 +291,7 @@ header.scrolled {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 10px;
     transition: var(--transition);
 }
 
@@ -1108,5 +1109,227 @@ footer {
 
     .credits-logo span {
         font-size: 1rem;
+    }
+}
+
+/* ------------------------------------------------------------------------------------------------ */
+
+/* Business Card Section */
+.business-card {
+    background: linear-gradient(135deg, var(--primary) 0%, #1a2530 100%);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.business-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/Card front.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.card-section-header {
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 1;
+}
+
+.card-section-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.card-section-header h2:after {
+    background: var(--secondary);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.card-section-header p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    color: #ecf0f1;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 200px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.card-preview {
+    perspective: 1000px;
+    height: 400px;
+    position: relative;
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 130%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow: hidden;
+}
+
+.card-front {
+    transform: rotateY(0deg);
+    z-index: 2;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+}
+
+.card-preview:hover .card-front {
+    transform: rotateY(-180deg);
+}
+
+.card-preview:hover .card-back {
+    transform: rotateY(0deg);
+}
+
+.card-front img,
+.card-back img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-info {
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.card-info h3 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.company {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--secondary);
+    margin-bottom: 5px;
+}
+
+.title {
+    font-size: 1rem;
+    color: #bdc3c7;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.contact-details {
+    margin-bottom: 30px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.contact-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(5px);
+}
+
+.contact-item i {
+    font-size: 1.2rem;
+    color: var(--secondary);
+    margin-right: 15px;
+    margin-top: 3px;
+    width: 20px;
+    text-align: center;
+}
+
+.contact-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    font-size: 0.9rem;
+    color: #bdc3c7;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.value {
+    font-size: 1rem;
+    color: white;
+    font-weight: 500;
+}
+
+.card-actions {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.card-actions .btn {
+    flex: 1;
+    min-width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+/* Responsive Design for Business Card Section */
+@media (max-width: 992px) {
+    .card-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .card-preview {
+        height: 350px;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .card-actions {
+        flex-direction: column;
+    }
+
+    .card-actions .btn {
+        width: 100%;
+    }
+
+    .card-info {
+        padding: 20px;
+    }
+
+    .card-section-header h2 {
+        font-size: 2rem;
     }
 }

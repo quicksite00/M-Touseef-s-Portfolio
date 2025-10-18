@@ -159,3 +159,72 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+// Business Card Section Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    // Save contact functionality
+    const saveContactBtn = document.getElementById('save-contact-btn');
+    if (saveContactBtn) {
+        saveContactBtn.addEventListener('click', function() {
+            // Create vCard content
+            const vCard = `BEGIN:VCARD
+VERSION:3.0
+FN:M. Touseef
+ORG:Silverlines Consultant
+TITLE:Architectural Designer & Builder
+TEL:0300-8557844
+TEL:0321-8557844
+EMAIL:silverlines.consultant@gmail.com
+ADR:;;131 Defence Main Boulevard;Lahore;;;Pakistan
+END:VCARD`;
+            
+            // Create and download vCard file
+            const blob = new Blob([vCard], { type: 'text/vcard' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'M_Touseef.vcf';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            
+            // Show confirmation
+            alert('Contact card downloaded. You can now import it to your contacts.');
+        });
+    }
+    
+    // Download card image functionality
+    const downloadCardBtn = document.getElementById('download-card-btn');
+    if (downloadCardBtn) {
+        downloadCardBtn.addEventListener('click', function() {
+            // Create a link to download the card front image
+            const a = document.createElement('a');
+            a.href = 'assets/Card front.jpg';
+            a.download = 'M_Touseef_Business_Card.jpg';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        });
+    }
+    
+    // Add scroll animation for the card section
+    const cardSection = document.getElementById('business-card');
+    if (cardSection) {
+        const observerOptions = {
+            threshold: 0.3
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                }
+            });
+        }, observerOptions);
+        
+        observer.observe(cardSection);
+    }
+});
